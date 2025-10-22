@@ -1,14 +1,4 @@
 import React, { JSX, useEffect, useState } from "react";
-
-/**
- * Chef Christoffel's Menu Management App - TypeScript (.tsx)
- * - Tailwind classes kept for styling
- * - localStorage persistence
- * - Home / Manage / Guest screens
- * - Add / Remove menu items
- */
-
-/* ---------- Types ---------- */
 type Course = "Starters" | "Mains" | "Desserts";
 type Route = "home" | "manage" | "guest";
 
@@ -20,11 +10,9 @@ interface MenuItem {
   price: number;
 }
 
-/* ---------- Constants ---------- */
 const COURSES: Course[] = ["Starters", "Mains", "Desserts"];
 const STORAGE_KEY = "chef_menu_items";
 
-/* ---------- Generic localStorage hook ---------- */
 function useLocalStorageState<T>(
   key: string,
   initial: T
@@ -153,7 +141,6 @@ export default function App(): JSX.Element {
   );
 }
 
-/* ---------- HomeScreen ---------- */
 interface HomeScreenProps {
   items: MenuItem[];
   totals: number;
@@ -193,7 +180,6 @@ function HomeScreen({
   );
 }
 
-/* ---------- ManageScreen ---------- */
 interface ManageScreenProps {
   items: MenuItem[];
   addItem: (item: Omit<MenuItem, "id">) => void;
@@ -222,7 +208,6 @@ function ManageScreen({
   );
 }
 
-/* ---------- GuestScreen ---------- */
 interface GuestScreenProps {
   items: MenuItem[];
   guestFilter: string;
@@ -307,7 +292,6 @@ function MenuList({
   );
 }
 
-/* ---------- AddItemForm ---------- */
 interface AddItemFormProps {
   onAdd: (item: Omit<MenuItem, "id">) => void;
 }
