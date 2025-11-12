@@ -8,7 +8,7 @@
 ## Links
 - **GitHub Repository**: [https://github.com/ST10490156/MAST5112-Part-2.git]
 
-## Changes made since Part 1
+## Changes made since Part 2
 - The app is made up 3 screens each displaying differnt information.
 - The app has Simpler Navigation.
 - Responsive Design was implemented aswell.
